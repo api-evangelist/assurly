@@ -1,23 +1,72 @@
 aid: assurly
+
 name: Assurly
-description: 'Assurly is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Assurly provides online loan insurance services, allowing borrowers to obtain mortgage, student, and personal loan protection entirely digitally. Their platform offers quick quotes, customizable coverage, and seamless integration with lenders, aiming to simplify the borrowing process and reduce risk for both borrowers and financial institutions. Assurly operates across France and Europe, emphasizing transparency, speed, and customer support throughout the insurance journey.'
+
 url: https://raw.githubusercontent.com/api-evangelist/assurly/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Insurance
+- FinTech
+- Loans
+- Digital
+- Europe
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Vendors
+  url: vendors/assurly-vendors.yml
+- type: LLMsTxt
+  url: llms/assurly-llms.txt
+- type: SecurityTxt
+  url: well-known/assurly-help-security.txt
+- type: WellKnown
+  url: well-known/assurly-well-known.yml
+- type: Hosts
+  url: hosts/assurly-hosts.yml
+- type: Support
+  url: https://help.assurly.com/fr/
+- type: Blog
+  url: https://www.assurly.com/blog/
+- type: Documentation
+  url: https://help.assurly.com/
+- type: DomainSecurity
+  url: security/assurly-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/assurly
+  url: https://www.assurly.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Help site provides documentation but no machine‑readable OpenAPI, AsyncAPI, GraphQL, gRPC or WSDL contracts.
+  evidence:
+    - url: https://help.assurly.com/fr/
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
